@@ -423,6 +423,12 @@ header .fa-solid:hover .dropdown-content{
     background-size: cover;
 }
 
+@media only screen and (max-width:480px)  {
+    .potrait{
+        display: none;
+    }
+}
+
 .skills .text p{
     color: rgb(139, 146, 157);
     font-weight: 400;
