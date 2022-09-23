@@ -200,7 +200,6 @@ header{
     background-size: cover;
     background-position: center;
     transform: rotate(15deg);
-    transition: all .4s ease;
 }
 
 .home .main-title span{
