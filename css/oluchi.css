@@ -55,15 +55,11 @@ header {
     align-items: center;
     padding: 0px 30px; }
     header .icon {
-      width: 70%; }
+      width: 65%; }
     header .nav {
-      width: 30%; }
+      width: 35%; }
       header .nav li {
-        display: none; }
-      header .nav .img {
-        width: 15%;
-        height: 15px;
-        margin: 0; } }
+        display: none; } }
 
 .main {
   padding: 100px 200px 50px 200px;
