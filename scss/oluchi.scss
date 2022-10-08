@@ -9,6 +9,10 @@ $header: 30px;
 $mywidth: 50%;
 $heading:20px;
 
+body{
+    box-sizing: border-box;
+}
+
 header{
     width: 100%;
     height: 50px;
@@ -16,12 +20,12 @@ header{
     box-shadow: 0 5px #FDFCFD;
     position: fixed;
     top: 0;
-    padding: 20px 50px;
+    padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .nav{
-        margin-right: 100px;
+        margin-right: 180px;
         li{
             list-style: none;
             display: inline;
@@ -34,27 +38,12 @@ header{
         }
     }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     header{
+        position: static;
         width: 100%;
-        padding: 5px 5px 3px 10px;
-        .icon{
-            h3{
-                font-size: 15px;
-                margin-left: 10px;
-            }
-        }
-        .nav{
-            margin-right: 50px;
-            li{
-                margin-left: 10px;
-                font-size: 10px;
-            }
-            img{
-                width: 20px;
-                height: 20px;
-                margin-left: 30px;
-            }
+        .nav li{
+            display: none;
         }
     }    
 }
@@ -69,12 +58,13 @@ header{
 }
 
 .main{
-    padding: 100px;
+    padding: 100px 200px 50px 200px;
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 50px;
     .text{
         width: 50%;
+        margin-top: 50px;
         h5{
             color: $quora;
             font-weight: 400;
@@ -102,14 +92,14 @@ header{
         }
     }
     .illustration{
-        width: 40%;
+        width: 50%;
         img{
-            width: 98%;
+            width: 100%;
         }    
     }
 }
 
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .main{
         width: 100%;
         padding: 0;
@@ -135,39 +125,36 @@ header{
 }
 
 .titles{
-    width: 100%;
-    height: auto;
+    padding: 50px 200px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
     h3{
         margin-bottom: 20px;
+        font-size: 25px;
     }
     .timeline{
-        width: 20%;
-        margin-left: 100px;
+        width: 25%;
         .fa-solid{
             color: $quora;
             font-size: 20px;
         }
     }
     .chating{
-        width: 20%;
+        width: 25%;
         .fa-solid{
             color: $quora;
             font-size: 20px;
         }
     }
     .reporting{
-        width: 20%;
-        margin-right: 100px;
+        width: 25%;
         .fa-solid{
             color: $quora;
             font-size: 20px;
         }
     }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .titles{
         width: 100%;
         flex-direction: column;
@@ -191,24 +178,25 @@ header{
 }
 
 .review{
-    padding: 100px;
+    padding: 100px 180px 50px 180px;
     display: flex;
-    justify-content: space-between;
     .draw{
         width: 50%;
         img{
-            width: 60%;
+            width: 100%;
         }
     }
     .line{
-        width: 30%;
-        margin-top: 30px;
+        width: 40%;
+        margin-left: 200px;
+        margin-top: 50px;
         h5{
-            color: $quora
+            color: $quora;
+            margin-bottom: 10px;
         }
         h2{
             font-size: 40px;
-            line-height: 1.1;
+            line-height: 1.5;
         }
         span{
             color: $quora;
@@ -218,7 +206,7 @@ header{
         }
     }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .review{
         width: 100%;
         padding: 0;
@@ -239,32 +227,21 @@ header{
 }
     
 .rates{
-    width: 90%;
-    height: 200px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: whitesmoke;
-    margin-left: 70px;
+    margin: 100px 150px 50px 150px;
+    padding: 50px 100px;
     p{
         font-size: 40px;
     }
     span{
         font-size: 15px;
     }
-    .trusted{
-        margin-left: 50px;
-        margin-top: 30px;
-    }
-    .users{
-        margin-top: 30px;
-    }
-    .markets{
-        margin-right: 50px;
-        margin-top: 30px;
-    }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .rates{
         width: 80%;
         height: 600px;
@@ -284,26 +261,69 @@ header{
 }
 
 .more{
-    padding: 100px;
+    padding: 100px 200px 50px 200px;
     .than{
         text-align: center;
-        margin-bottom: 25px;
         span{
             color: $quora;
             font-size: 25px;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', sans-serif;
         }
     }
     .list{
-        font-weight: bold;
-        li{
-            text-decoration: none;
-            display: inline;
-            margin-left: 50px;
-            margin-right: 100px;
+        width: 100%;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        .facebook{
+            width: 14%;
+            height: 30px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .adidas{
+            width: 12%;
+            height: 30px;
+            margin-left: 100px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .google{
+            width: 12%;
+            height: 30px;
+            margin-left: 100px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .crayola{
+            width: 16%;
+            height: 100px;
+            margin-left: 100px;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .careem{
+            width: 12%;
+            height: 30px;
+            margin-left: 100px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
     }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .more{
         padding: 0;
         width: 100%;
@@ -323,17 +343,19 @@ header{
 }
 
 .privacy{
-    padding: 100px;
+    padding: 50px 200px 50px 200px;
     display: flex;
     justify-content: space-between;
     .policy{
-        width: 50%;
+        width: 40%;
+        margin-top: 50px;
         h5{
             color: $quora;
+            margin-bottom: 10px;
         }
         h2{
             font-size: 40px;
-            line-height: 1.1;
+            line-height: 1.3;
         }
         span{
             color: $quora;
@@ -343,14 +365,13 @@ header{
         }
     }
     .wave{
-        width: 30%;
+        width: 50%;
         img{
             width: 100%;
-            margin-right: 100px;
         }
     }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .privacy{
         width: 100%;
         padding: 0;
@@ -369,6 +390,7 @@ header{
 
 .news{
     text-align: center;
+    padding: 50px 200px;
     h5{
         color: $quora;
         font-size: 16px;
@@ -390,7 +412,7 @@ header{
         }
     }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .news{
         width: 100%;
     }
@@ -401,6 +423,7 @@ header{
     width: 100%;
     background-color: yellow;
     margin-top: 100px;
+    display: none;
     .sub-section{
         width: $mywidth;
         height: 200px;
@@ -427,7 +450,7 @@ header{
         background-color: purple ;
     }
 }
-@media only screen and (max-width:480px){
+@media only screen and (min-width:320px) and (max-width:480px){
     .section{
         display: none;
     }
