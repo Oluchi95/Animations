@@ -12,26 +12,35 @@ button, input, select, textarea {
   border: none;
   outline: none; }
 
-body {
+* {
   box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%; }
 
 header {
   width: 100%;
-  height: 50px;
+  height: 70px;
   background-color: #fff;
   box-shadow: 0 5px #FDFCFD;
   position: fixed;
   top: 0;
   padding: 20px 100px;
   display: flex;
-  justify-content: space-between;
-  align-items: center; }
+  justify-content: space-between; }
+  header .icon {
+    width: 30%; }
+    header .icon a {
+      text-decoration: none;
+      color: #000; }
   header .nav {
-    margin-right: 180px; }
+    width: 60%; }
     header .nav li {
       list-style: none;
       display: inline;
-      margin-left: 30px; }
+      margin-left: 50px; }
     header .nav img {
       width: 30px;
       height: 30px;
@@ -40,9 +49,21 @@ header {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   header {
     position: static;
-    width: 100%; }
-    header .nav li {
-      display: none; } }
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px; }
+    header .icon {
+      width: 70%; }
+    header .nav {
+      width: 30%; }
+      header .nav li {
+        display: none; }
+      header .nav .img {
+        width: 15%;
+        height: 15px;
+        margin: 0; } }
 
 .main {
   padding: 100px 200px 50px 200px;
@@ -84,19 +105,15 @@ header {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .main {
     width: 100%;
-    padding: 0;
+    padding: 0 30px;
     flex-direction: column;
-    margin-bottom: 50px; }
+    margin-bottom: 100px; }
     .main .text {
-      width: 70%;
-      margin-left: 70px;
-      margin-right: 30px;
-      margin-bottom: 30px; }
-      .main .text h5, .main .text h2, .main .text p {
-        width: 100%; }
+      width: 100%;
+      margin: 0; }
     .main .illustration {
-      width: 70%;
-      margin: 0 30px 30px 70px; }
+      width: 100%;
+      margin-top: 50px; }
       .main .illustration img {
         width: 100%; } }
 
@@ -125,20 +142,19 @@ header {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .titles {
+    padding: 0 30px;
     width: 100%;
     flex-direction: column;
-    margin-bottom: 100px; }
+    margin-bottom: 100px;
+    text-align: center; }
     .titles .timeline {
-      width: 60%;
-      margin-left: 70px;
+      width: 100%;
       margin-bottom: 30px; }
     .titles .chating {
-      width: 60%;
-      margin-left: 70px;
+      width: 100%;
       margin-bottom: 30px; }
     .titles .reporting {
-      width: 60%;
-      margin-left: 70px;
+      width: 100%;
       margin-bottom: 30px; } }
 
 .review {
@@ -171,25 +187,25 @@ header {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .review {
     width: 100%;
-    padding: 0;
+    padding: 10px 28px;
     flex-direction: column;
     margin-bottom: 100px; }
     .review .draw {
-      width: 70%;
-      margin: 0 30px 30px 70px; }
+      width: 100%;
+      margin-bottom: 50px; }
       .review .draw img {
         width: 100%; }
     .review .line {
-      width: 70%;
-      margin: 0 30px 30px 70px; } }
+      width: 100%;
+      margin: 0 0 0 10px; } }
 
 .rates {
-  height: 100px;
+  height: 200px;
   display: flex;
   justify-content: space-between;
   border-radius: 15px;
   background-color: whitesmoke;
-  margin: 100px 150px 50px 150px;
+  margin: 100px 150px;
   padding: 50px 100px; }
   .rates p {
     font-size: 40px; }
@@ -198,20 +214,18 @@ header {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .rates {
-    width: 80%;
-    height: 600px;
+    width: 70%;
+    height: 400px;
     flex-direction: column;
-    margin: 0 0 100px 50px;
+    margin: 0 75px 0 75px;
+    padding: 10px 0 0 0;
     text-align: center; }
-    .rates .trusted {
-      margin: 30px 0 0 0; }
-    .rates .users {
-      margin: 0; }
     .rates .markets {
-      margin: 0 0 30px 0; } }
+      margin-bottom: 15px; } }
 
 .more {
-  padding: 100px 200px 50px 200px; }
+  width: 100%;
+  margin-top: 100px; }
   .more .than {
     text-align: center; }
     .more .than span {
@@ -220,6 +234,7 @@ header {
       font-weight: bold;
       font-family: 'Trebuchet MS', sans-serif; }
   .more .list {
+    padding: 0 200px;
     width: 100%;
     height: 100px;
     display: flex;
@@ -261,20 +276,59 @@ header {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .more {
-    padding: 0;
     width: 100%;
-    margin-bottom: 100px; }
+    margin-bottom: 50px; }
     .more .than {
       width: 100%;
-      margin: 0 0 30px 0; }
+      text-align: center; }
+      .more .than p {
+        font-size: 12px; }
+        .more .than p span {
+          font-size: 20px; }
     .more .list {
-      width: 70%;
-      margin: 0 0 0 70px; }
-      .more .list li {
-        margin: 0 0 0 20px; } }
+      width: 100%;
+      height: 50px;
+      padding: 0 30px;
+      display: flex;
+      align-items: center; }
+      .more .list .facebook {
+        width: 14%;
+        height: 14px; }
+        .more .list .facebook img {
+          width: 100%;
+          height: 100%; }
+      .more .list .adidas {
+        width: 12%;
+        height: 14px;
+        margin-left: 35px; }
+        .more .list .adidas img {
+          width: 100%;
+          height: 100%; }
+      .more .list .google {
+        width: 12%;
+        height: 14px;
+        margin-left: 35px; }
+        .more .list .google img {
+          width: 100%;
+          height: 100%; }
+      .more .list .crayola {
+        width: 15%;
+        height: 50px;
+        margin-left: 35px;
+        margin-top: 10px; }
+        .more .list .crayola img {
+          width: 100%;
+          height: 100%; }
+      .more .list .careem {
+        width: 12%;
+        height: 14px;
+        margin-left: 35px; }
+        .more .list .careem img {
+          width: 100%;
+          height: 100%; } }
 
 .privacy {
-  padding: 50px 200px 50px 200px;
+  padding: 50px 200px;
   display: flex;
   justify-content: space-between; }
   .privacy .policy {
@@ -303,19 +357,16 @@ header {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .privacy {
     width: 100%;
-    padding: 0;
-    flex-direction: column;
-    margin-bottom: 100px; }
+    padding: 5px 30px;
+    flex-direction: column; }
     .privacy .policy {
-      width: 70%;
-      margin: 0 30px 50px 70px; }
+      width: 100%;
+      margin-bottom: 50px; }
     .privacy .wave {
-      width: 60%;
-      margin: 0 30px 0 70px; } }
+      width: 100%; } }
 
 .news {
-  text-align: center;
-  padding: 50px 200px; }
+  text-align: center; }
   .news h5 {
     color: #f96444;
     font-size: 16px; }
@@ -338,7 +389,9 @@ header {
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   .news {
-    width: 100%; } }
+    width: 100%;
+    margin-top: 50px;
+    text-align: center; } }
 
 .section {
   height: 300px;
